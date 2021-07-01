@@ -1,18 +1,23 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package paquete2;
 
 import java.io.Serializable;
 
-/**
- *
- * @author reroes
- */
 public class PasajeNormal extends PasajeInterCantonal 
         implements Serializable{
     
+    public double porcentajeAdicional;
     
+    public void setPorcentajeAdicional(){
+        porcentajeAdicional = 25;
+    }       
+    
+    public double getPorcentajeAdicional(){
+        return porcentajeAdicional;
+    }
+    
+    @Override
+    public void setValorPasaje(){
+        vaPasaje = (km * 0.10)+(preBase - (preBase * 
+                (porcentajeAdicional/100)));
+    }
 }
