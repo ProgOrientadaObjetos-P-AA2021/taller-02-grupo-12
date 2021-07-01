@@ -1,27 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package paquete2;
 
 import java.io.Serializable;
 
-/**
- *
- * @author reroes
- */
 public abstract class PasajeInterCantonal implements Serializable{
     
     protected String nombre;
     protected String cedula;
     protected String origen;
     protected String destino;
-    protected int km;
-    protected  double preBase;
+    protected double km;
+    protected double preBase;
     protected double vaPasaje;
     
-    public PasajeInterCantonal(String n,String ci,String o,String de,int k,double pre){
+    public PasajeInterCantonal(String n,String ci,String o,String de,double k,double pre){
         nombre = n;
         cedula = ci;
         origen =  o;
@@ -30,9 +21,14 @@ public abstract class PasajeInterCantonal implements Serializable{
         preBase = pre;
     }
     
+    public abstract void setValorPasaje();       
+    
+    public double getValorPasaje(){
+        return vaPasaje;
+    }
+    
     public void setNombrePasajero(String n){
-        nombre = n;
-        
+        nombre = n;        
     }
     public void setCedula(String i){
         cedula = i;
@@ -43,7 +39,7 @@ public abstract class PasajeInterCantonal implements Serializable{
     public void setDestino(String s){
         destino = s;
     }
-    public void set(int d){
+    public void setKm(double d){
         km = d;
     }
     public void setTarifaBase(double t){
@@ -62,18 +58,24 @@ public abstract class PasajeInterCantonal implements Serializable{
     public String getDestino(){
         return destino;
     }
-    public int getNKmDistancia(){
+    public double getKm(){
         return km;
     }
     public double getTarifaBase(){
         return preBase;
     }
-    
-  
     @Override
     public String toString(){
-        return String.format("Pasaje.");
+        String cadena = String.format("\nPasaje Intenacional.-\n"
+                + "Nombre Pasajero:%s\n"
+                + "Cédula: %s\n"
+                + "Origen: %s\n"
+                + "Destino: %s\n"
+                + "Numero de km de distancia: %.2f\n"
+                + "Tarifa Base: %.2f\n"
+                + "Valor Pasaje: %.2f\n",
+                getNombrePasjero(),getCedula(),getOrigen(),getDestino(),
+                getKm(),getTarifaBase(), getValorPasaje());        
+        return cadena;
     }
-    
-    
 }
