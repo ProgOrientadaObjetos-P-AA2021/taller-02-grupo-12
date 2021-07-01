@@ -17,7 +17,7 @@ public class PasajeTerceraEdad extends PasajeInterCantonal
       
     @Override
     public String toString(){
-        String cadena = String.format("\nPasaje Intenacional.-\n"
+        String cadena = String.format("\nPasaje Tercera Edad.-\n"
                 + "Nombre Pasajero:%s\n"
                 + "Cédula: %s\n"
                 + "Origen: %s\n"

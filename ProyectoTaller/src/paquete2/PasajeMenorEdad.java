@@ -28,16 +28,18 @@ public class PasajeMenorEdad extends PasajeInterCantonal
     
     @Override
     public String toString(){
-        String cadena = String.format("\nPasaje Intenacional.-\n"
+        String cadena = String.format("\nPasaje menor Edad.-\n"
                 + "Nombre Pasajero:%s\n"
                 + "Cédula: %s\n"
                 + "Origen: %s\n"
                 + "Destino: %s\n"
                 + "Numero de km de distancia: %.2f\n"
                 + "Tarifa Base: %.2f\n"
+                + "Pordentaje de descuanto: %.2f\n"
                 + "Valor Pasaje: %.2f\n",
                 getNombrePasjero(),getCedula(),getOrigen(),getDestino(),
-                getKm(),getTarifaBase(), getValorPasaje());        
+                getKm(),getTarifaBase(), getPorcentajeDescuento() 
+                ,getValorPasaje());        
         return cadena;
     }
 }
