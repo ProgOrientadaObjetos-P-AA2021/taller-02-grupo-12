@@ -23,7 +23,7 @@ public class PasajeUniversitario extends PasajeInterCantonal
     
     @Override
     public void setValorPasaje(){
-        vaPasaje = preBase/2;
+        vaPasaje = (preBase/2);
     }
     
     @Override
@@ -38,7 +38,8 @@ public class PasajeUniversitario extends PasajeInterCantonal
                 + "Valor Pasaje: %.2f\n"
                 + "Nombre de Universidad: %s\n",
                 getNombrePasjero(),getCedula(),getOrigen(),getDestino(),
-                getKm(),getTarifaBase(), getValorPasaje(),getNombreUniversidad());        
+                getKm(),getTarifaBase(), getValorPasaje()
+                ,getNombreUniversidad());        
         return cadena;
     }
 }

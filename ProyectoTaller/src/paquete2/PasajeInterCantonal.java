@@ -12,7 +12,8 @@ public abstract class PasajeInterCantonal implements Serializable{
     protected double preBase;
     protected double vaPasaje;
     
-    public PasajeInterCantonal(String n,String ci,String o,String de,double k,double pre){
+    public PasajeInterCantonal(String n,String ci,String o,String de
+            ,double k,double pre){
         nombre = n;
         cedula = ci;
         origen =  o;
